@@ -1,0 +1,23 @@
+.container.mt-5
+  .row.justify-content-center
+    .col-8
+      %h2 お申し込みフォーム
+      .card
+        .card-header
+          = link_to 'サービス内容に関してはこちらからご確認お願いします', root_path
+        .card-body
+          = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+            .form-inputs
+              = f.input :name, required: true, autofocus: true
+              = f.input :email, required: true, autofocus: true, input_html: { autocomplete: 'email' }
+              = f.input :password, required: true, hint: ("#{@minimum_password_length}文字以上" if @minimum_password_length),
+                input_html: { autocomplete: 'new-password' }
+              = f.input :password_confirmation, required: true, input_html: { autocomplete: 'new-password' }
+              = f.input :plan_type
+              = f.input :delivery_frequency
+              = f.input :prefecture
+              = f.input :address
+              = f.input :phone_number
+              = f.input :allergy_note
+            .form-actions
+              = f.button :submit, '申し込む', class: 'btn btn-primary'

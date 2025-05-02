@@ -19,6 +19,7 @@ gem 'solid_queue'
 gem 'stimulus-rails'
 gem 'thruster', require: false
 gem 'turbo-rails'
+gem 'enumerize'
 
 group :development, :test do
   gem 'brakeman', require: false
