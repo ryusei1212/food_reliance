@@ -1,0 +1,13 @@
+.container.mt-4
+  %h2 ようこそ、#{current_user.name} さん
+  %div
+    %p 現在のプラン: #{current_user.plan_type_text}
+    %p 配送頻度: #{current_user.delivery_frequency_text}
+
+  %h3 今後の配送予定
+  %ul
+    - current_user.deliveries.each do |delivery|
+      %li
+        = delivery.delivery_date
+        （#{delivery.delivery_time_slot}）
+        = link_to "変更", edit_users_delivery_path(delivery)

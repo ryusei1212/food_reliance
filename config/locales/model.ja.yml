@@ -1,8 +1,25 @@
 ja:
   activerecord:
     attributes:
+      user:
+        prefecture: 都道府県
+        address: 住所
+        phone_number: 電話番号
+        plan_type: プラン
+        delivery_frequency: 配送頻度
+        allergy_note: アレルギーなど
       meal_set:
-        name: セット名
+        name: プラン名
         price: 価格
         description: 説明
         weight: 重さ
+        is_frozen: 冷凍
+  enumerize:
+    user:
+      delivery_frequency:
+        weekly: 週１
+        biweekly: 月2
+      plan_type:
+        basic: ベーシックプラン
+        premium: プレミアムプラン
+        family: ファミリープラン

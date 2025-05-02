@@ -41,6 +41,6 @@ class Admins::MealSetsController < Admins::ApplicationController
   end
 
   def meal_set_params
-    params.require(:meal_set).permit(:name, :price, :description, :weight)
+    params.require(:meal_set).permit(:name, :price, :description, :weight, :is_frozen)
   end
 end
