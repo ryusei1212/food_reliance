@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   }
 
   namespace :admins do
-    root 'home#index'
+    root 'meal_sets#index'
+    resources :meal_sets, only: %i[index new create edit update destroy]
   end
 end

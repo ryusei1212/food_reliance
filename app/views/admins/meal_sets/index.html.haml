@@ -1,0 +1,22 @@
+.container.mt-4
+  .text-end
+    = link_to '食材セットの登録', new_admins_meal_set_path
+
+  %table.table.table-hover
+    %thead
+      %tr
+        %th ID
+        %th= MealSet.human_attribute_name(:name)
+        %th= MealSet.human_attribute_name(:price)
+        %th= MealSet.human_attribute_name(:description)
+        %th= MealSet.human_attribute_name(:weight)
+        %th
+    %tbody
+      - @meal_sets.each do |meal_set|
+        %tr
+          %td= meal_set.id
+          %td= meal_set.name
+          %td= number_to_currency(meal_set.price)
+          %td= truncate(meal_set.description, length: 100)
+          %td= "#{meal_set.weight}(グラム)"
+          %th= link_to '編集', edit_admins_meal_set_path(meal_set)

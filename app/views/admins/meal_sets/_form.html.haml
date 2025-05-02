@@ -1,0 +1,10 @@
+= simple_form_for([:admins, meal_set]) do |f|
+  = f.input :name
+  = f.input :description, input_html: { rows: 10 }
+  .row
+    .col-4
+      = f.input :price, hint: '税抜価格で登録してください'
+  .row
+    .col-4
+      = f.input :weight, hint: 'g(グラム)で登録してください'
+  = f.button :submit, class: 'btn btn-primary'

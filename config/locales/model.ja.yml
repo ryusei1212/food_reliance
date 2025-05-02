@@ -1,0 +1,8 @@
+ja:
+  activerecord:
+    attributes:
+      meal_set:
+        name: セット名
+        price: 価格
+        description: 説明
+        weight: 重さ

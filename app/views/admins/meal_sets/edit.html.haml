@@ -1,0 +1,10 @@
+.container.mt-4
+  .row
+    .col-8.mx-auto
+      .card.mb-3
+        .card-body
+          = render 'form', meal_set: @meal_set
+
+      .card
+        .card-body
+          = link_to '削除', admins_meal_set_path(@meal_set), data: { turbo_method: :delete, turbo_confirm: '削除してもよろしいですか？' }, class: 'btn btn-danger'
