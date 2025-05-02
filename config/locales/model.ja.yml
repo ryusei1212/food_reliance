@@ -13,7 +13,7 @@ ja:
         price: 価格
         description: 説明
         weight: 重さ
-        is_frozen: 冷凍
+        freezing: 冷凍
   enumerize:
     user:
       delivery_frequency:
