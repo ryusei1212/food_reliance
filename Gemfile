@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
+gem 'devise'
 gem 'haml-rails'
 gem 'jsbundling-rails'
 gem 'kamal', require: false
