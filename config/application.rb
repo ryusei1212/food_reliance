@@ -41,5 +41,13 @@ module FoodReliance
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.hosts << 'food_reliance.test'
+
+    config.i18n.default_locale = :ja
+    config.time_zone = 'Tokyo'
+
+    config.generators do |g|
+      g.helper false
+      g.skip_routes true
+    end
   end
 end
